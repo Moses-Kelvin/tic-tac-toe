@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe-game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- modal to confirm restart  -->
+    <div class="overlay">
+        <div class="modal">
+            <h3>Are you sure you want to restart?</h3>
+            <div>
+                <button class="confirm-restart">yes</button>
+                <button class="decline-restart">No</button>
+            </div>
+        </div>
+    </div>
+    <!-- winner's modal  -->
+    <div class="overlay2">
+        <div class="modal2">
+            <p class="winner-msg">OH NO, YOU LOST...</p>
+            <div>
+                <img class="winner-icon" src="./images/icon-o.svg" alt="">
+                <h1 class="round-taker">TAKES THE ROUND</h1>
+            </div>
+            <div>
+                <button class="quit">QUIT</button>
+                <button class="next-round_btn">NEXT ROUND</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- home page  -->
+
+    <section class="home">
+        <div>
+            <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="select-section">
+            <h1>PICK PLAYER 1'S MARK</h1>
+            <div>
+                <img class="el-x" src="./images/icon-x.svg" alt="">
+                <img class="el-o" src="./images/icon-o-outline.svg" alt="">
+            </div>
+            <p>REMEMBER: X GOES FIRST</p>
+        </div>
+        <button class="vs-cpu_btn">NEW GAME (VS CPU)</button>
+        <button class="vs-player_btn">NEW GAME (VS PLAYER)</button>
+    </section>
+
+    <!-- game section  -->
+    <main>
+        <header>
+            <div>
+                <img src="./images/logo.svg" alt="">
+            </div>
+            <div>
+                <h3 class="player-turn">X Turn</h3>
+            </div>
+            <button class="restart-btn">
+                <img src="./images/icon-restart.svg" alt="">
+            </button>
+        </header>
+        <section class="game">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+        </section>
+        <div class="boxes-div">
+            <div class="box">
+                <p class="player-el">X (you)</p>
+                <h1 class="x-score">0</h1>
+            </div>
+            <div class="box">
+                <p>TIES</p>
+                <h1 class="tie">0</h1>
+            </div>
+            <div class="box">
+                <p class="computer-el">O (CPU)</p>
+                <h1 class="o-score">0</h1>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

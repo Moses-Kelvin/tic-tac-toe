@@ -1,0 +1,460 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black;
+    background-size: cover;
+}
+
+main {
+    display: none;
+    width: 100%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 40%;
+    margin: auto;
+    gap: 6rem;
+    margin-top: 2rem;
+}
+
+header div:nth-child(1),
+header div:nth-child(2),
+header button {
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    border-radius: 15px;
+}
+
+header button {
+    border: 0;
+    width: 40%;
+    background-color: white;
+    justify-self: end;
+}
+
+header div:nth-child(1) {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+
+header div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+header div:nth-child(2)>h2 {
+    color: white;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+header button {
+    display: grid;
+    justify-items: center;
+}
+
+header button>img {
+    width: 50%;
+}
+
+header div:nth-child(1)>img {
+    width: 50%;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 40%;
+    background-image: url(./images//1663149184993.jpg);
+    margin: auto;
+    padding: 2rem;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+.btn {
+    width: 6rem;
+    height: 6rem;
+    border: 0;
+    border-radius: 15px;
+    font-size: 3rem;
+}
+
+.btn,
+.modal2 p,
+.modal2 h1,
+.home h1,
+.home p
+ {
+    text-shadow:
+        0 0 2px #fff,
+        0 0 3px #fff,
+        0 0 4px #fff,
+        0 0 8px #f09,
+        0 0 9px #f09,
+        0 0 16px #f09,
+        0 0 20px #f09;
+}
+
+.restart-btn {
+ border-bottom: 5px solid grey;
+}
+
+.btn,
+.box,
+header div:nth-child(2),
+header div:nth-child(1) {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+.btn,
+.box,
+header div:nth-child(2),
+header div:nth-child(1),
+.select-section,
+.vs-cpu_btn,
+.modal,
+.modal2,
+.modal button,
+.vs-player_btn,
+.picked-element {
+    box-shadow: inset 0 0 2px #fff,
+        0 0 3px #fff,
+        0 0 4px #fff,
+        inset 0 0 8px #f09,
+        0 0 9px #f09,
+        0 0 16px #f09,
+        0 0 20px #f09;
+}
+
+.boxes-div {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.box {
+    margin-top: 2rem;
+    height: 5rem;
+    width: 11rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.box>h1 {
+    margin-top: 0;
+}
+
+.box>p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.bump {
+    animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+
+    0% {
+        transform: scale(1);
+        background-color: grey;
+    }
+
+    10% {
+        transform: scale(0.9);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgba(0 0 0 0.9);
+    }
+}
+
+.overlay,
+.overlay2 {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.overlay2 {
+    display: none;
+}
+
+.modal {
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    width: 30%;
+    margin: auto;
+    z-index: 100;
+    background-color: transparent;
+    color: white;
+    margin-top: 7rem;
+    padding: 2rem 0;
+    border-radius: 10px;
+}
+
+.modal button {
+    border: 0;
+    margin-right: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+}
+
+.modal div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.modal2 {
+    display: grid;
+    justify-items: center;
+    margin-top: 7rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: transparent;
+}
+
+.modal2>div:nth-child(2) {
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    margin: auto;
+}
+
+.modal2 p,
+.modal2 h1 {
+    color: white;
+}
+
+.modal2>div:nth-child(3) {
+    display: flex;
+    gap: 2rem;
+}
+
+.modal2>div:nth-child(3) button {
+    border: 0;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: orange;
+}
+
+.modal2>div:nth-child(2) img {
+    width: 2rem;
+    height: 2rem;
+    align-self: center;
+}
+
+/* home page styles  */
+
+.home {
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    width: 100%;
+    gap: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
+.home div:nth-child(1) {
+    width: 10%;
+    margin: auto;
+}
+
+.select-section {
+    display: grid;
+    justify-items: center;
+    width: 50%;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.select-section div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: black;
+}
+
+.select-section div:nth-child(2)>img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.picked-element {
+    padding: 0.7rem 3rem;
+    border-radius: 10px;
+    background-color: rgb(223, 213, 213);
+}
+
+.home button {
+    width: 50%;
+    padding: 1.5rem 0;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom: 8px solid #f09;
+}
+
+.vs-cpu_btn {
+    margin-top: 2rem;
+}
+
+
+/* media query for mobile  */
+
+@media (max-width: 500px) {
+    .home {
+        width: 100%;
+        margin-top: 6rem;
+    }
+
+    .home h1 {
+        font-size: 1.3rem;
+    }
+
+    .select-section {
+        width: 85%;
+    }
+
+    .select-section div:nth-child(2) {
+        gap: 4rem;
+    }
+
+    .home button {
+        width: 85%;
+        font-size: 1rem;
+    }
+
+    .home div:nth-child(1)  {
+        width: 20%;
+    }
+
+    .boxes-div {
+        grid-template-columns: 1fr;
+    }
+
+    .game {
+        width: 70%;
+    }
+
+    header {
+        width: 70%;
+        gap: 2rem;
+    }
+
+    .btn {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    header button {
+        width: 60%;
+    }
+
+    .modal2 h1 {
+        font-size: 1.4rem;
+    }
+
+    .modal2 div:nth-child(2) {
+        margin-bottom: 1rem;
+    }
+
+    .modal {
+        width: 80%;
+    }
+
+    .modal h3 {
+        font-size: 1rem;
+    }
+
+    .modal div:nth-child(2) {
+        margin-top: 1rem;
+    }
+
+    .player-turn {
+        font-size: 1rem;
+    }
+
+    .boxes-div {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .box {
+        width: 80%;
+         justify-self: center;
+    }
+}
+
+/* media query for tablet and ipad  */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .game {
+        width: 70%;
+    }
+
+    main {
+        margin-top: 3rem;
+    }
+
+    header {
+        width: 70%;
+    }
+
+    .modal {
+        width: 55%;
+    }
+
+    .select-section {
+        width: 70%;
+    }
+
+    .home button {
+        width: 70%;
+    }
+ }
